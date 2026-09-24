@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Buzzer Beater Fitness Privacy Policy</title>
+<style>
+  :root {
+    --ink: #16181d;
+    --paper: #f4f5f7;
+    --panel: #e9ebef;
+    --muted: #5b6270;
+    --line: #d7dae0;
+    --accent: #d91f26;
+    --accent-ink: #7a0f13;
+    --accent-tint: #fbe6e6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #eef0f3;
+      --paper: #101216;
+      --panel: #181b21;
+      --muted: #9aa1ad;
+      --line: #262b33;
+      --accent: #ff5a5c;
+      --accent-ink: #ffb3b4;
+      --accent-tint: #2a1416;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #eef0f3;
+    --paper: #101216;
+    --panel: #181b21;
+    --muted: #9aa1ad;
+    --line: #262b33;
+    --accent: #ff5a5c;
+    --accent-ink: #ffb3b4;
+    --accent-tint: #2a1416;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, .eyebrow, .toc a, .masthead-name, nav.toc {
+    font-family: "Oswald", "Arial Narrow", "Helvetica Neue", sans-serif;
+  }
+  a { color: var(--accent-ink); text-decoration-thickness: 1px; }
+  a:hover { color: var(--accent); }
+
+  .band {
+    border-top: 3px solid var(--accent);
+    border-bottom: 1px solid var(--line);
+    background: var(--panel);
+  }
+  .masthead {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 28px 24px 24px;
+  }
+  .masthead-name {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 10px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: var(--muted);
+  }
+  .masthead-name .buzzer {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-tint);
+  }
+  h1 {
+    margin: 14px 0 6px;
+    font-size: clamp(34px, 6vw, 48px);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    text-wrap: balance;
+  }
+  .dek {
+    color: var(--muted);
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: 17px;
+    max-width: 56ch;
+  }
+  .meta {
+    margin-top: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    font-family: "Oswald", sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .meta b { color: var(--ink); font-weight: 600; }
+
+  nav.toc {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 10px;
+    overflow-x: auto;
+  }
+  nav.toc a {
+    flex: 0 0 auto;
+    display: inline-block;
+    padding: 6px 12px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    font-size: 12.5px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  nav.toc a:hover { border-color: var(--accent); color: var(--accent-ink); }
+
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 24px 30px;
+  }
+  section { padding: 30px 0; border-top: 1px solid var(--line); }
+  section:first-of-type { border-top: none; padding-top: 6px; }
+  section:target { background: var(--accent-tint); margin: 0 -16px; padding: 30px 16px; border-radius: 10px; border-top-color: transparent; }
+
+  .eyebrow {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-ink);
+    font-weight: 600;
+  }
+  .eyebrow .num {
+    font-size: 12px;
+    color: var(--muted);
+    font-weight: 500;
+  }
+  h2 {
+    margin: 6px 0 14px;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.005em;
+  }
+  p { margin: 0 0 14px; max-width: 64ch; }
+  p:last-child { margin-bottom: 0; }
+  ul { margin: 0 0 14px; padding-left: 22px; max-width: 62ch; }
+  li { margin-bottom: 6px; }
+  strong { font-weight: 600; }
+
+  table.storage {
+    width: 100%;
+    max-width: 64ch;
+    border-collapse: collapse;
+    margin: 4px 0 16px;
+    font-size: 15.5px;
+  }
+  table.storage th, table.storage td {
+    text-align: left;
+    padding: 9px 12px 9px 0;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  table.storage th {
+    font-family: "Oswald", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 500;
+  }
+
+  .callout {
+    background: var(--panel);
+    border-left: 3px solid var(--accent);
+    padding: 14px 16px;
+    border-radius: 0 8px 8px 0;
+    font-size: 15.5px;
+  }
+  .callout p { margin-bottom: 8px; }
+  .callout p:last-child { margin-bottom: 0; }
+
+  footer.band .masthead { padding-top: 22px; padding-bottom: 30px; }
+  footer p { color: var(--muted); font-size: 14px; max-width: 60ch; margin: 0 0 8px; }
+  footer .masthead-name { margin-bottom: 6px; }
+
+  @media (max-width: 520px) {
+    body { font-size: 16px; }
+    section:target { margin: 0 -12px; padding: 24px 12px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="band">
+  <div class="masthead">
+    <span class="masthead-name"><span class="buzzer"></span>Buzzer Beater Fitness</span>
+    <h1>Privacy Policy</h1>
+    <p class="dek">A plain-language account of what this app stores, where it lives, and who else ever sees it. Short answer: nobody but you — there's no server.</p>
+    <div class="meta">Effective <b>September 21, 2026</b> · Applies to <b>Buzzer Beater Fitness</b> for iOS</div>
+  </div>
+</div>
+
+<nav class="toc" aria-label="Sections">
+  <a href="#overview">Overview</a>
+  <a href="#what-we-store">What's stored</a>
+  <a href="#where">Where it lives</a>
+  <a href="#sign-in">Sign-in</a>
+  <a href="#notifications">Notifications</a>
+  <a href="#sharing">Sharing &amp; export</a>
+  <a href="#what-we-dont-do">What we don't do</a>
+  <a href="#your-control">Your control</a>
+  <a href="#children">Children</a>
+  <a href="#changes">Changes</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<main>
+
+<section id="overview">
+  <div class="eyebrow"><span class="num">01</span>Overview</div>
+  <h2>There's no server, so there's nothing to collect</h2>
+  <p>Buzzer Beater Fitness is a single-device workout tracker. It has no account system, no backend, and no company database — everything you enter lives in a private, on-device database that belongs to the app on your iPhone. We (the developer) never see it, because it never leaves your device unless you explicitly export or share it yourself.</p>
+  <p>This policy describes exactly what the app stores locally, the few things that ever cross your device's boundary, and the controls you have over all of it.</p>
+</section>
+
+<section id="what-we-store">
+  <div class="eyebrow"><span class="num">02</span>What's stored</div>
+  <h2>Only what you put in, to run the app you asked for</h2>
+  <p>Everything below exists solely to power the app's own features — building plans, logging sets, and charting your progress. None of it is used for anything else.</p>
+  <table class="storage">
+    <tr><th>Category</th><th>Examples</th></tr>
+    <tr><td>Profile</td><td>Name, height, fitness goal, unit preference (lb/kg)</td></tr>
+    <tr><td>Plans</td><td>Training splits, days, exercises, supersets, drop sets, per-muscle volume targets</td></tr>
+    <tr><td>Workout history</td><td>Sessions, sets, weights, reps, rest times, pre/post-workout feel</td></tr>
+    <tr><td>Body metrics</td><td>Weigh-ins you log on the Progress tab</td></tr>
+    <tr><td>Cardio &amp; mobility</td><td>Duration, distance, heart rate, and drill logs you enter</td></tr>
+    <tr><td>Custom exercises</td><td>Any exercise you add beyond the built-in catalog</td></tr>
+  </table>
+  <p>The app does not read anything else on your phone. It has no access to your contacts, photos, location, microphone, or camera, and doesn't ask for any.</p>
+</section>
+
+<section id="where">
+  <div class="eyebrow"><span class="num">03</span>Where it lives</div>
+  <h2>On your phone, in the app's own sandbox</h2>
+  <p>Data is stored using Apple's SwiftData framework, inside the storage area iOS gives exclusively to this app — no other app can read it, and it's protected by your device's own passcode/Face ID encryption at rest, the same as any other app's local data.</p>
+  <div class="callout">
+    <p><strong>A note on device backups.</strong> If you have iCloud or Finder backup turned on for your iPhone, this app's local data is included in that backup like any other app's — that's between you and your own iCloud account. We have no access to your iCloud, and no copy of your data exists anywhere we control.</p>
+  </div>
+</section>
+
+<section id="sign-in">
+  <div class="eyebrow"><span class="num">04</span>Sign-in</div>
+  <h2>Sign in with Apple or Google is a local label, not an account</h2>
+  <p>If you choose Sign in with Apple or Google during setup, the app stores the identifier that provider hands back — purely so it can show your name and recognize "you" locally. There's no account server on our end to send it to, so that identifier is never verified, transmitted, or checked against anything; it sits in the same on-device database as everything else and never leaves your phone.</p>
+</section>
+
+<section id="notifications">
+  <div class="eyebrow"><span class="num">05</span>Notifications &amp; Live Activities</div>
+  <h2>Scheduled on your phone, not routed through us</h2>
+  <p>The rest-timer alert and the Lock Screen / Dynamic Island workout timer are scheduled directly on your device using Apple's local notification and Live Activity frameworks. No push-notification service is involved, and no workout data is sent anywhere to make them work.</p>
+</section>
+
+<section id="sharing">
+  <div class="eyebrow"><span class="num">06</span>Sharing &amp; export</div>
+  <h2>Nothing goes out unless you tap share</h2>
+  <p>Two features can send data off your device, and both require you to act first:</p>
+  <ul>
+    <li><strong>Plan Summary</strong> renders a shareable image of one plan, handed to iOS's own share sheet — you choose where it goes, if anywhere.</li>
+    <li><strong>Export</strong> writes a full backup file you can save or send yourself, entirely under your control.</li>
+  </ul>
+  <p>Neither happens automatically, and neither talks to a server of ours — there isn't one.</p>
+</section>
+
+<section id="what-we-dont-do">
+  <div class="eyebrow"><span class="num">07</span>What we don't do</div>
+  <h2>No trackers, no ads, no selling data</h2>
+  <ul>
+    <li>No analytics or crash-reporting SDKs of any kind</li>
+    <li>No advertising identifiers, ad networks, or ad tracking</li>
+    <li>No third-party integrations that receive your data</li>
+    <li>No selling, renting, or otherwise monetizing your information — there's nothing to sell, we never have it</li>
+  </ul>
+</section>
+
+<section id="your-control">
+  <div class="eyebrow"><span class="num">08</span>Your control</div>
+  <h2>Delete it from the app, or just delete the app</h2>
+  <p>Settings → <strong>Delete All Data</strong> wipes the on-device database after a multi-step confirmation. Deleting the app itself removes the database entirely, since the app's sandbox is the only place it ever existed.</p>
+</section>
+
+<section id="children">
+  <div class="eyebrow"><span class="num">09</span>Children</div>
+  <h2>Not directed at children</h2>
+  <p>Buzzer Beater Fitness is intended for general audiences and isn't directed at children under 13. It doesn't knowingly collect information from children — in practice, it doesn't collect information from anyone, on- or off-device, as described above.</p>
+</section>
+
+<section id="changes">
+  <div class="eyebrow"><span class="num">10</span>Changes</div>
+  <h2>If that ever changes, this page changes first</h2>
+  <p>If a future version adds a feature that transmits data off your device — iCloud sync or a connected service, for example — this policy will be updated to describe it, and the version notes will call it out, before that feature ships.</p>
+</section>
+
+<section id="contact">
+  <div class="eyebrow"><span class="num">11</span>Contact</div>
+  <h2>Questions</h2>
+  <p>Reach out via <strong>Settings → Contact Support</strong> inside the app, or email <a href="mailto:support@buzzerbeaterlabs.com">support@buzzerbeaterlabs.com</a>.</p>
+</section>
+
+</main>
+
+<div class="band">
+  <footer class="masthead">
+    <span class="masthead-name"><span class="buzzer"></span>Buzzer Beater Fitness</span>
+    <p>This policy covers the Buzzer Beater Fitness iOS app only.</p>
+  </footer>
+</div>
+
+</body>
+</html>
