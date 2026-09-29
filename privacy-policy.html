@@ -40,7 +40,6 @@
 
   * { box-sizing: border-box; }
   body {
-    margin: 0;
     background: var(--paper);
     color: var(--ink);
     font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
@@ -217,7 +216,7 @@
     <span class="masthead-name"><span class="buzzer"></span>Buzzer Beater Fitness</span>
     <h1>Privacy Policy</h1>
     <p class="dek">A plain-language account of what this app stores, where it lives, and who else ever sees it. Short answer: nobody but you — there's no server.</p>
-    <div class="meta">Effective <b>September 24, 2026</b> · Applies to <b>Buzzer Beater Fitness</b> for iOS</div>
+    <div class="meta">Effective <b>September 29, 2026</b> · Applies to <b>Buzzer Beater Fitness</b> for iOS</div>
   </div>
 </div>
 
@@ -240,7 +239,7 @@
 <section id="overview">
   <div class="eyebrow"><span class="num">01</span>Overview</div>
   <h2>There's no server, so there's nothing to collect</h2>
-  <p>Buzzer Beater Fitness is a single-device workout tracker. It has no account system, no backend, and no company database — everything you enter lives in a private, on-device database that belongs to the app on your iPhone. We (the developer) never see it, because it never leaves your device unless you explicitly export or share it yourself.</p>
+  <p>Buzzer Beater Fitness is a single-device workout tracker. It has no account system, no backend, and no company database — everything you enter lives in a private, on-device database that belongs to the app on your iPhone, plus automatic backup copies saved to <em>your own</em> iCloud Drive. We (the developer) never see any of it — none of it is ever sent to us.</p>
   <p>This policy describes exactly what the app stores locally, the few things that ever cross your device's boundary, and the controls you have over all of it.</p>
 </section>
 
@@ -267,12 +266,19 @@
   <div class="callout">
     <p><strong>A note on device backups.</strong> If you have iCloud or Finder backup turned on for your iPhone, this app's local data is included in that backup like any other app's — that's between you and your own iCloud account. We have no access to your iCloud, and no copy of your data exists anywhere we control.</p>
   </div>
+  <h3>Automatic backups to your iCloud Drive</h3>
+  <p>So you don't lose your history if you lose your phone or delete the app, the app saves a backup file — your profile, plans, workout history, weigh-ins, and custom exercises — to a "Buzzer Beater Fitness" folder in your own iCloud Drive after each workout and at least once a day. It keeps the most recent 30, plus one per month for a year.</p>
+  <ul>
+    <li>The files go to <strong>your</strong> iCloud account, stored and encrypted by Apple under Apple's own privacy terms. We have no access to your iCloud Drive and never receive these files.</li>
+    <li>You can see, move, or delete them any time in the Files app (iCloud Drive → Buzzer Beater Fitness).</li>
+    <li>You can turn them off in Account → <strong>Automatic Backups</strong>. If iCloud Drive is off for the app, backups are kept on your phone instead.</li>
+  </ul>
 </section>
 
 <section id="sign-in">
   <div class="eyebrow"><span class="num">04</span>Sign-in</div>
-  <h2>Sign in with Apple or Google is a local label, not an account</h2>
-  <p>If you choose Sign in with Apple or Google during setup, the app stores the identifier that provider hands back — purely so it can show your name and recognize "you" locally. There's no account server on our end to send it to, so that identifier is never verified, transmitted, or checked against anything; it sits in the same on-device database as everything else and never leaves your phone.</p>
+  <h2>There's no sign-in</h2>
+  <p>The app has no accounts and doesn't offer Sign in with Apple, Google, or any other login. Backups use the iCloud account already on your phone; the app never sees your Apple ID. If sign-in is ever added, this policy will describe it first.</p>
 </section>
 
 <section id="notifications">
@@ -284,12 +290,13 @@
 <section id="sharing">
   <div class="eyebrow"><span class="num">06</span>Sharing &amp; export</div>
   <h2>Nothing goes out unless you tap share</h2>
-  <p>Two features can send data off your device, and both require you to act first:</p>
+  <p>Apart from the automatic backups to your own iCloud Drive described above, these features can send data off your device, and each requires you to act first:</p>
   <ul>
-    <li><strong>Plan Summary</strong> renders a shareable image of one plan, handed to iOS's own share sheet — you choose where it goes, if anywhere.</li>
+    <li><strong>Share Plan</strong> creates a file of one plan's structure (days, exercises, sets, reps, notes — no workout history), handed to iOS's own share sheet — you choose where it goes, if anywhere.</li>
+    <li><strong>Plan Summary</strong> renders a shareable image of one plan the same way.</li>
     <li><strong>Export</strong> writes a full backup file you can save or send yourself, entirely under your control.</li>
   </ul>
-  <p>Neither happens automatically, and neither talks to a server of ours — there isn't one.</p>
+  <p>None of them talks to a server of ours — there isn't one.</p>
 </section>
 
 <section id="what-we-dont-do">
@@ -304,8 +311,8 @@
 
 <section id="your-control">
   <div class="eyebrow"><span class="num">08</span>Your control</div>
-  <h2>Delete it from the app, or just delete the app</h2>
-  <p>Settings → <strong>Delete All Data</strong> wipes the on-device database after a multi-step confirmation. Deleting the app itself removes the database entirely, since the app's sandbox is the only place it ever existed.</p>
+  <h2>Delete it from the app, and from your iCloud Drive</h2>
+  <p>Account → <strong>Delete All Data</strong> wipes the on-device database after a multi-step confirmation. Deleting the app removes the on-device database too. Automatic backups in your iCloud Drive are kept either way — that's what lets you restore after reinstalling — so to remove those as well, delete the Buzzer Beater Fitness folder in the Files app (iCloud Drive), or turn off Automatic Backups first.</p>
 </section>
 
 <section id="children">
@@ -317,7 +324,7 @@
 <section id="changes">
   <div class="eyebrow"><span class="num">10</span>Changes</div>
   <h2>If that ever changes, this page changes first</h2>
-  <p>If a future version adds a feature that transmits data off your device — iCloud sync or a connected service, for example — this policy will be updated to describe it, and the version notes will call it out, before that feature ships.</p>
+  <p>If a future version adds another feature that transmits data off your device — iCloud sync or a connected service, for example — this policy will be updated to describe it, and the version notes will call it out, before that feature ships.</p>
 </section>
 
 <section id="contact">
