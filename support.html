@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Buzzer Beater Fitness Support</title>
+<style>
+  :root {
+    --ink: #16181d;
+    --paper: #f4f5f7;
+    --panel: #e9ebef;
+    --muted: #5b6270;
+    --line: #d7dae0;
+    --accent: #d91f26;
+    --accent-ink: #7a0f13;
+    --accent-tint: #fbe6e6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #eef0f3;
+      --paper: #101216;
+      --panel: #181b21;
+      --muted: #9aa1ad;
+      --line: #262b33;
+      --accent: #ff5a5c;
+      --accent-ink: #ffb3b4;
+      --accent-tint: #2a1416;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #eef0f3;
+    --paper: #101216;
+    --panel: #181b21;
+    --muted: #9aa1ad;
+    --line: #262b33;
+    --accent: #ff5a5c;
+    --accent-ink: #ffb3b4;
+    --accent-tint: #2a1416;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, .eyebrow, .toc a, .masthead-name, nav.toc {
+    font-family: "Oswald", "Arial Narrow", "Helvetica Neue", sans-serif;
+  }
+  a { color: var(--accent-ink); text-decoration-thickness: 1px; }
+  a:hover { color: var(--accent); }
+
+  .band {
+    border-top: 3px solid var(--accent);
+    border-bottom: 1px solid var(--line);
+    background: var(--panel);
+  }
+  .masthead {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 28px 24px 24px;
+  }
+  .masthead-name {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 10px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: var(--muted);
+  }
+  .masthead-name .buzzer {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-tint);
+  }
+  h1 {
+    margin: 14px 0 6px;
+    font-size: clamp(34px, 6vw, 48px);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    text-wrap: balance;
+  }
+  .dek {
+    color: var(--muted);
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: 17px;
+    max-width: 56ch;
+  }
+  .meta {
+    margin-top: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    font-family: "Oswald", sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .meta b { color: var(--ink); font-weight: 600; }
+
+  nav.toc {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 10px;
+    overflow-x: auto;
+  }
+  nav.toc a {
+    flex: 0 0 auto;
+    display: inline-block;
+    padding: 6px 12px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    font-size: 12.5px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  nav.toc a:hover { border-color: var(--accent); color: var(--accent-ink); }
+
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 24px 30px;
+  }
+  section { padding: 30px 0; border-top: 1px solid var(--line); }
+  section:first-of-type { border-top: none; padding-top: 6px; }
+  section:target { background: var(--accent-tint); margin: 0 -16px; padding: 30px 16px; border-radius: 10px; border-top-color: transparent; }
+
+  .eyebrow {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-ink);
+    font-weight: 600;
+  }
+  .eyebrow .num {
+    font-size: 12px;
+    color: var(--muted);
+    font-weight: 500;
+  }
+  h2 {
+    margin: 6px 0 14px;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.005em;
+  }
+  p { margin: 0 0 14px; max-width: 64ch; }
+  p:last-child { margin-bottom: 0; }
+  ul { margin: 0 0 14px; padding-left: 22px; max-width: 62ch; }
+  li { margin-bottom: 6px; }
+  strong { font-weight: 600; }
+
+  table.storage {
+    width: 100%;
+    max-width: 64ch;
+    border-collapse: collapse;
+    margin: 4px 0 16px;
+    font-size: 15.5px;
+  }
+  table.storage th, table.storage td {
+    text-align: left;
+    padding: 9px 12px 9px 0;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  table.storage th {
+    font-family: "Oswald", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 500;
+  }
+
+  .callout {
+    background: var(--panel);
+    border-left: 3px solid var(--accent);
+    padding: 14px 16px;
+    border-radius: 0 8px 8px 0;
+    font-size: 15.5px;
+  }
+  .callout p { margin-bottom: 8px; }
+  .callout p:last-child { margin-bottom: 0; }
+
+  footer.band .masthead { padding-top: 22px; padding-bottom: 30px; }
+  footer p { color: var(--muted); font-size: 14px; max-width: 60ch; margin: 0 0 8px; }
+  footer .masthead-name { margin-bottom: 6px; }
+
+  @media (max-width: 520px) {
+    body { font-size: 16px; }
+    section:target { margin: 0 -12px; padding: 24px 12px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="band">
+  <div class="masthead">
+    <span class="masthead-name"><span class="buzzer"></span>Buzzer Beater Fitness</span>
+    <h1>Support</h1>
+    <p class="dek">Help with Buzzer Beater Fitness — a workout planner and logger for iPhone and Apple Watch.</p>
+    <div class="meta">Email <b><a href="mailto:support@buzzerbeaterlabs.com">support@buzzerbeaterlabs.com</a></b> · We usually reply within a couple of days</div>
+  </div>
+</div>
+
+<nav class="toc" aria-label="Sections">
+  <a href="#contact">Contact</a>
+  <a href="#getting-started">Getting started</a>
+  <a href="#backups">Backups</a>
+  <a href="#faq">Common questions</a>
+  <a href="#requirements">Requirements</a>
+  <a href="#privacy">Privacy</a>
+</nav>
+
+<main>
+
+<section id="contact">
+  <div class="eyebrow"><span class="num">01</span>Contact</div>
+  <h2>Get in touch</h2>
+  <p>Email <a href="mailto:support@buzzerbeaterlabs.com">support@buzzerbeaterlabs.com</a>, or in the app go to <strong>Account → Contact Support</strong> — that opens an email that already includes your app version, iOS version, and device model, which helps us answer faster.</p>
+  <p>For a bug, it helps to say what you tapped, what you expected, and what happened instead. A screenshot is great.</p>
+</section>
+
+<section id="getting-started">
+  <div class="eyebrow"><span class="num">02</span>Getting started</div>
+  <h2>Plan, log, and track</h2>
+  <ul>
+    <li><strong>Build a plan:</strong> Plan tab → New Plan → add days → add exercises with target sets, reps, and rest. Turn on <em>Active plan</em> so the Train tab suggests what's next.</li>
+    <li><strong>Log a workout:</strong> Train tab → tap a plan day (or Freestyle Workout). Enter weight and reps, then tap the checkmark to finish each set and start the rest timer.</li>
+    <li><strong>Finish:</strong> tap Finish, rate how it felt and how hard it was, and Save to see your summary — time, volume, new personal records, and best sets.</li>
+    <li><strong>Track progress:</strong> the Progress tab has per-lift charts, personal records, body weight, effort, cardio, and mobility.</li>
+  </ul>
+  <p>The in-app <strong>Account → Help &amp; FAQ</strong> covers every feature in more detail.</p>
+</section>
+
+<section id="backups">
+  <div class="eyebrow"><span class="num">03</span>Backups</div>
+  <h2>Your data is backed up to your iCloud Drive</h2>
+  <p>After each workout, and at least once a day, the app saves a backup to <strong>Files → iCloud Drive → Buzzer Beater Fitness</strong>. You can also tap <strong>Account → Back Up Now</strong>, or <strong>Export All Data</strong> to save a copy anywhere.</p>
+  <ul>
+    <li><strong>New phone or reinstall:</strong> the welcome screen offers to restore your latest backup.</li>
+    <li><strong>Restore any time:</strong> Account → Restore Data. Your current data is saved as a safety copy first, so a restore can be undone from the same screen.</li>
+    <li><strong>Backups show "this device only"?</strong> iCloud Drive is off for the app — turn it on in Settings → [your name] → iCloud.</li>
+  </ul>
+</section>
+
+<section id="faq">
+  <div class="eyebrow"><span class="num">04</span>Common questions</div>
+  <h2>Quick answers</h2>
+  <p><strong>Do I need an account?</strong> No. There's no sign-up and no server — everything stays on your phone and in your own iCloud Drive.</p>
+  <p><strong>Can I use kilograms?</strong> Yes — Account → Units.</p>
+  <p><strong>What do the row colors mean?</strong> Once you check off a set: green is inside your target rep range, green with ↑ is above it (time to add weight), amber is one rep short, red is two or more short.</p>
+  <p><strong>How do I use the Apple Watch app?</strong> Start a workout on your iPhone or Watch; the Watch shows your next set and rest timer, and you can log sets from your wrist. Keep your iPhone nearby — it stores the data.</p>
+  <p><strong>Can I share a plan or a workout?</strong> Yes — open a plan → Share Plan to send a file a friend can import, or tap Share on a finished workout for an image card.</p>
+</section>
+
+<section id="requirements">
+  <div class="eyebrow"><span class="num">05</span>Requirements</div>
+  <h2>What you need</h2>
+  <ul>
+    <li>iPhone with iOS 26.5 or later</li>
+    <li>Apple Watch app (optional): watchOS 26.5 or later, paired with the iPhone running the app</li>
+  </ul>
+</section>
+
+<section id="privacy">
+  <div class="eyebrow"><span class="num">06</span>Privacy</div>
+  <h2>Nothing is collected</h2>
+  <p>No accounts, no analytics, no tracking. Read the full <a href="privacy-policy.html">Privacy Policy</a>.</p>
+</section>
+
+</main>
+
+<div class="band">
+  <footer class="masthead">
+    <span class="masthead-name"><span class="buzzer"></span>Buzzer Beater Fitness</span>
+    <p>Support for the Buzzer Beater Fitness iOS and watchOS app.</p>
+  </footer>
+</div>
+
+</body>
+</html>
