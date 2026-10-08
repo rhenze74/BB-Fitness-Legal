@@ -215,7 +215,7 @@
     <span class="masthead-name"><span class="buzzer"></span>Buzzer Beater Fitness</span>
     <h1>Privacy Policy</h1>
     <p class="dek">A plain-language account of what this app stores, where it lives, and who else ever sees it. Short answer: nobody but you — there's no server.</p>
-    <div class="meta">Effective <b>October 5, 2026</b> · Applies to <b>Buzzer Beater Fitness</b> for iOS</div>
+    <div class="meta">Effective <b>October 7, 2026</b> · Applies to <b>Buzzer Beater Fitness</b> for iOS</div>
   </div>
 </div>
 
@@ -252,11 +252,11 @@
     <tr><td>Profile</td><td>Name, height, fitness goal, unit preference (lb/kg)</td></tr>
     <tr><td>Plans</td><td>Training splits, days, exercises, supersets, drop sets, per-muscle volume targets</td></tr>
     <tr><td>Workout history</td><td>Sessions, sets, weights, reps, rest times, pre/post-workout feel — including workouts you import from Apple Health or from another app's export file</td></tr>
-    <tr><td>Body metrics</td><td>Weigh-ins you log on the Progress tab</td></tr>
+    <tr><td>Body metrics</td><td>Weigh-ins and body measurements (chest, waist, arms, body fat and so on) you log on the Progress tab</td></tr>
     <tr><td>Cardio &amp; mobility</td><td>Duration, distance, heart rate, and drill logs you enter</td></tr>
     <tr><td>Custom exercises</td><td>Any exercise you add beyond the built-in catalog</td></tr>
   </table>
-  <p>Apart from Apple Health (below, only if you turn it on), files you choose yourself (a backup to restore, a shared plan, or another workout app's export, such as from Strong or Hevy, to import), and saving an image to Photos when you choose Save Image, the app does not read anything else on your phone. An imported file is read on your phone only; it's never uploaded anywhere. It has no access to your contacts, location, microphone, or camera, and doesn't ask for any.</p>
+  <p>Apart from Apple Health (below, only if you turn it on), files and photos you choose yourself (a backup to restore, a shared plan, another workout app's export such as from Strong or Hevy, or a photo or screenshot of a workout program to turn into a plan — read on your iPhone, including by Apple Intelligence's on-device model where available), and saving an image to Photos when you choose Save Image, the app does not read anything else on your phone. An imported file is read on your phone only; it's never uploaded anywhere. It has no access to your contacts, location, microphone, or camera, and doesn't ask for any (an imported workout's route comes from Apple Health, below — the app never uses location services).</p>
 </section>
 
 <section id="where">
@@ -267,7 +267,7 @@
     <p><strong>A note on device backups.</strong> If you have iCloud or Finder backup turned on for your iPhone, this app's local data is included in that backup like any other app's — that's between you and your own iCloud account. We have no access to your iCloud, and no copy of your data exists anywhere we control.</p>
   </div>
   <h3>Automatic backups to your iCloud Drive</h3>
-  <p>So you don't lose your history if you lose your phone or delete the app, the app saves a backup file — your profile, plans, workout history, weigh-ins, and custom exercises — to a "Buzzer Beater Fitness" folder in your own iCloud Drive after each workout and at least once a day. It keeps the most recent 30, plus one per month for a year.</p>
+  <p>So you don't lose your history if you lose your phone or delete the app, the app saves a backup file — your profile, plans, workout history, weigh-ins, body measurements, and custom exercises — to a "Buzzer Beater Fitness" folder in your own iCloud Drive after each workout and at least once a day. It keeps the most recent 30, plus one per month for a year.</p>
   <ul>
     <li>The files go to <strong>your</strong> iCloud account, stored and encrypted by Apple under Apple's own privacy terms. We have no access to your iCloud Drive and never receive these files.</li>
     <li>You can see, move, or delete them any time in the Files app (iCloud Drive → Buzzer Beater Fitness).</li>
@@ -287,10 +287,13 @@
   <p>If you turn on <strong>Account → Apple Health</strong> and grant access, the app uses Apple Health (HealthKit) to:</p>
   <ul>
     <li><strong>Read</strong> the heart rate and active calories your Apple Watch recorded during a workout, your resting heart rate, and your date of birth (only to estimate your maximum heart rate for heart-rate zones), and show them with your workouts and on the Progress tab.</li>
-    <li><strong>Read</strong> workouts that other apps saved to Apple Health (for example Apple's Workout app or another training app), with their type, time, distance, calories, heart rate, and the name of the app that recorded them, when you choose <strong>Import Workouts from Health</strong> or turn on <strong>Import New Workouts</strong>. They're added to your workout history in this app.</li>
-    <li><strong>Save</strong> the workouts you track with the Apple Watch app to Apple Health, so they count toward your Activity rings, and — unless you turn off <strong>Save Workouts to Health</strong> — the workouts you log on your iPhone without the Watch (their type, time, and any distance), so Health's workout list is complete.</li>
+    <li><strong>Read and save</strong> your body weight, unless you turn off <strong>Sync Body Weight</strong>: weigh-ins from a smart scale or another app appear in your weight history, and weigh-ins you log here are saved to Apple Health (edit or delete one here and it's updated or removed there too).</li>
+    <li><strong>Read and save</strong> your waist circumference and body fat percentage, unless you turn off <strong>Sync Waist &amp; Body Fat</strong>: readings from a smart scale or another app appear in Body Measurements, and the ones you log here are saved to Apple Health. Your other measurements (chest, arms and so on) stay in the app only.</li>
+    <li><strong>Read</strong> workouts that other apps saved to Apple Health (for example Apple's Workout app or another training app), with their type, time, distance, calories, heart rate, and the name of the app that recorded them, when you choose <strong>Import Workouts from Health</strong> or turn on <strong>Import New Workouts</strong> (which also runs in the background when Apple Health has a new workout). They're added to your workout history in this app.</li>
+    <li><strong>Read</strong> the route (GPS locations) and distance readings of an imported run, walk or ride, only while you're looking at that workout, to draw its map and work out its mile or kilometer splits. Routes are never stored by the app, never included in backups, and never sent anywhere — they stay in Apple Health. The app itself never tracks your location.</li>
+    <li><strong>Save</strong> the workouts you track with the Apple Watch app to Apple Health, so they count toward your Activity rings, and — unless you turn off <strong>Save Workouts to Health</strong> — the workouts you log on your iPhone without the Watch (their type, time, any pauses, and any distance), so Health's workout list is complete. If you edit or delete one of these workouts here, the copy in Apple Health is updated or removed too — the app only ever changes or removes what it saved itself.</li>
   </ul>
-  <p>Imported workouts, and a workout's average, minimum, and maximum heart rate, calories, and time in zones, are stored with that workout on your iPhone and included in your backups (your own iCloud Drive, or files you export). Health data is never sent to us or any third party, never used for advertising or marketing, and never sold. You can change or revoke access any time in the Health app → Sharing → Apps → Buzzer Beater Fitness, or turn the feature off in the app.</p>
+  <p>Imported workouts, a workout's average, minimum, and maximum heart rate, calories, and time in zones, the peak heart rate of each set and the average of each exercise, and the weigh-ins and measurements that came from Apple Health, are stored with that workout or in your history on your iPhone and included in your backups (your own iCloud Drive, or files you export). Health data is never sent to us or any third party, never used for advertising or marketing, and never sold. You can change or revoke access any time in the Health app → Sharing → Apps → Buzzer Beater Fitness, or turn the feature off in the app.</p>
 </section>
 
 <section id="notifications">
