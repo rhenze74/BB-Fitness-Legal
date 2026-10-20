@@ -249,7 +249,7 @@
   <p>Everything below exists solely to power the app's own features — building plans, logging sets, and charting your progress. None of it is used for anything else.</p>
   <table class="storage">
     <tr><th>Category</th><th>Examples</th></tr>
-    <tr><td>Profile</td><td>Name, height, fitness goal, unit preference (lb/kg)</td></tr>
+    <tr><td>Profile</td><td>Name, height, sex (optional, used only to estimate body fat from your measurements), fitness goal, unit preference (lb/kg)</td></tr>
     <tr><td>Plans</td><td>Training splits, days, exercises, supersets, drop sets, per-muscle volume targets</td></tr>
     <tr><td>Workout history</td><td>Sessions, sets, weights, reps, rest times, pre/post-workout feel — including workouts you import from Apple Health or from another app's export file</td></tr>
     <tr><td>Body metrics</td><td>Weigh-ins and body measurements (chest, waist, arms, body fat and so on) you log on the Progress tab</td></tr>
@@ -304,7 +304,7 @@
 
 <section id="sharing">
   <div class="eyebrow"><span class="num">06</span>Sharing &amp; export</div>
-  <h2>Nothing goes out unless you tap share</h2>
+  <h2>Nothing about you goes out unless you tap share</h2>
   <p>Apart from the automatic backups to your own iCloud Drive described above, these features can send data off your device, and each requires you to act first:</p>
   <ul>
     <li><strong>Share Plan</strong> creates a file of one plan's structure (days, exercises, sets, reps, notes — no workout history), handed to iOS's own share sheet — you choose where it goes, if anywhere.</li>
@@ -312,6 +312,7 @@
     <li><strong>Export</strong> writes a full backup file you can save or send yourself, entirely under your control.</li>
   </ul>
   <p>None of them talks to a server of ours — there isn't one.</p>
+  <p><strong>Update check.</strong> About once a day the app asks Apple's public App Store lookup which version of Buzzer Beater Fitness is current, so it can tell you when an update is out. The request contains only the app's App Store ID and your device's region (to ask the right country's store) — nothing about you or your workouts — and goes to Apple, not to us.</p>
 </section>
 
 <section id="what-we-dont-do">
